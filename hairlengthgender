@@ -1,0 +1,10 @@
+from sklearn import tree 
+from sklearn.model_selection import train_test_split
+X=[[165,19],[175,32],[136,35],[174,65],[141,28],[176,15]]
+Y=['Man','Woman','Woman','Man','Woman','Man']
+data_feature_names = ['height','length of hair']
+X_train, X_test, y_train,y_test = train_test_split(X,Y,test_size = 0.3,random_state = 1)
+DTclf = tree.DecisionTreeClassifier()
+DTclf = DTclf.fit(X,Y)
+prediction= DTclf.predict([[135,29]])
+print(prediction)
