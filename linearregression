@@ -1,0 +1,8 @@
+import pandas as pd
+import seaborn as sb
+import matplotlib.pyplot as plt
+data = pd.read_csv('C:/Users/Hashif/Downloads/advertising.csv')
+data
+print(data.corr())
+dataplot= sb.heatmap(data.corr(), cmap="YlGnBu", annot=True)
+plt.show()
